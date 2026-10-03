@@ -1,0 +1,16 @@
+/* HS Eletrônicos | Brandbook 2.0 | Paleta de referência */
+:root {
+  --hs-black: #101010;
+  --hs-silver: #BFC3C7;
+  --hs-silver-light: #E1E3E6;
+  --hs-white: #F5F5F5;
+  --hs-blue: #268CFF;
+  --hs-green: #26C985;
+  --hs-text: #101010;
+  --hs-background: #F5F5F5;
+  --hs-action-bg: #268CFF;
+  --hs-action-text: #101010;
+  --hs-font: Arial, Helvetica, sans-serif;
+  --hs-radius: 16px;
+  --hs-space: 8px;
+}

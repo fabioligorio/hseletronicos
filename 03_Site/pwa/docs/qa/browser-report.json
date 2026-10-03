@@ -1,0 +1,83 @@
+{
+  "checks": [
+    {
+      "name": "Página inicial renderizada",
+      "pass": true
+    },
+    {
+      "name": "Manifest e ícones",
+      "pass": true
+    },
+    {
+      "name": "Acessibilidade /",
+      "pass": true
+    },
+    {
+      "name": "Acessibilidade /servicos/",
+      "pass": true
+    },
+    {
+      "name": "Acessibilidade /contato/",
+      "pass": true
+    },
+    {
+      "name": "Acessibilidade /instalar/",
+      "pass": true
+    },
+    {
+      "name": "Mensagem de WhatsApp real com codificação segura",
+      "pass": true
+    },
+    {
+      "name": "FAQ expande e recolhe",
+      "pass": true
+    },
+    {
+      "name": "Todos os links internos existentes",
+      "pass": true
+    },
+    {
+      "name": "Mobile 390px e menu acessível",
+      "pass": true
+    },
+    {
+      "name": "Sem overflow em 320, 390, 768 e 1440 px",
+      "pass": true
+    },
+    {
+      "name": "Service worker ativo",
+      "pass": true
+    },
+    {
+      "name": "Rotas não visitadas disponíveis offline",
+      "pass": true
+    },
+    {
+      "name": "Instruções de instalação disponíveis",
+      "pass": true
+    },
+    {
+      "name": "Nenhum erro de JavaScript",
+      "pass": true
+    }
+  ],
+  "accessibility": [
+    {
+      "route": "/",
+      "violations": []
+    },
+    {
+      "route": "/servicos/",
+      "violations": []
+    },
+    {
+      "route": "/contato/",
+      "violations": []
+    },
+    {
+      "route": "/instalar/",
+      "violations": []
+    }
+  ],
+  "errors": []
+}

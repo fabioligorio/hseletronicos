@@ -1,0 +1,10 @@
+import fs from 'node:fs/promises';
+import sharp from 'sharp';
+await fs.mkdir('public/images',{recursive:true});await fs.mkdir('public/icons',{recursive:true});
+await sharp('docs/source-assets/logic-board.png').resize({width:1000,withoutEnlargement:true}).webp({quality:83}).toFile('public/images/logic-board.webp');
+const icon=await fs.readFile('public/favicon.svg');
+for(const size of [192,512])await sharp(icon).resize(size,size).png().toFile(`public/icons/icon-${size}.png`);
+await sharp(icon).resize(180,180).png().toFile('public/icons/apple-touch-icon.png');
+const mask=Buffer.from(icon.toString().replace('rx="104"','rx="0"'));
+await sharp(mask).resize(512,512).png().toFile('public/icons/icon-maskable.png');
+console.log('Imagem otimizada e quatro ícones PNG gerados.');

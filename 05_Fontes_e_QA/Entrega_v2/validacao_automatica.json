@@ -1,0 +1,16 @@
+{
+  "brandbook": {
+    "pages": 32,
+    "all_pages_have_text": true,
+    "text_characters": 25711,
+    "pdf_bytes": 1599966,
+    "path": "C:\\Users\\Fabio\\Desktop\\HS Eletronicos\\01_Brandbook\\HS_Eletronicos_Brandbook_v2.pdf"
+  },
+  "prd": {
+    "pages": 47,
+    "all_pages_have_text": true,
+    "text_characters": 50407,
+    "pdf_bytes": 165200,
+    "path": "C:\\Users\\Fabio\\Desktop\\HS Eletronicos\\06_Estrategia_e_PRD\\HS_Eletronicos_PRD_v1.pdf"
+  }
+}

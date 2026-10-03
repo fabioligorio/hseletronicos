@@ -1,0 +1,3 @@
+import { Breadcrumb, Eyebrow, ServiceCards, Process, ContactBanner } from '@/components/ui';
+export const metadata={title:'Serviços de assistência técnica',description:'Assistência técnica para iPhones, celulares e consulta para outros eletrônicos em Belo Horizonte e região.'};
+export default function Services(){return <><div className="container"><Breadcrumb label="Serviços"/><div className="page-intro"><Eyebrow>ASSISTÊNCIA TÉCNICA</Eyebrow><h1>O cuidado começa<br/>entendendo o problema.</h1><p>Escolha seu equipamento e conheça o próximo passo. Atendimento presencial e reparação 24 horas em Belo Horizonte e região.</p></div><div className="page-content"><ServiceCards/></div></div><Process/><ContactBanner/></>;}

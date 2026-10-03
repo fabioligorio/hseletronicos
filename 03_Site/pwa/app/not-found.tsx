@@ -1,0 +1,2 @@
+import Link from 'next/link';
+export default function NotFound(){return <section className="container not-found"><p className="eyebrow">PÁGINA NÃO ENCONTRADA</p><h1>Vamos por<br/>outro caminho.</h1><p>Este endereço não está disponível.<br/>Encontre nossos serviços ou combine seu atendimento.</p><div className="hero-actions" style={{justifyContent:'center'}}><Link className="button" href="/">Voltar ao início</Link><Link className="button outline" href="/contato/">Falar com Hugo</Link></div></section>;}

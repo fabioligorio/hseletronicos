@@ -1,0 +1,29 @@
+{
+  "brandName": "HS Eletrônicos",
+  "responsibleName": "Hugo",
+  "serviceArea": "Belo Horizonte e região",
+  "hoursLabel": "Atendimento presencial e reparação 24 horas",
+  "hoursMode": "presencial_reparacao_24h",
+  "hoursSource": "Confirmado pelo usuário nesta conversa",
+  "physicalAddress": null,
+  "whatsapp": "5531991137969",
+  "email": null,
+  "domain": null,
+  "socialLinks": {
+    "instagram": null,
+    "tiktok": null,
+    "kwai": null,
+    "youtube": null
+  },
+  "siteScope": "servicos_sem_catalogo",
+  "publicationReady": false,
+  "missing": [
+    "Local ou procedimento para combinar atendimento",
+    "Serviços específicos",
+    "Domínio e contas",
+    "Condições comerciais",
+    "Política de dados",
+    "Assets finais"
+  ],
+  "notes": "Dados de planejamento. Null significa não informado. Não publicar campos pendentes nem prometer conclusão imediata do reparo. WhatsApp confirmado pelo usuário: (31) 99113-7969."
+}

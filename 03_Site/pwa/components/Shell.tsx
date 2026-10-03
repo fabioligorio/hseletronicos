@@ -1,0 +1,16 @@
+"use client";
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useEffect, useRef, useState } from 'react';
+import { Menu, X, Home, Cpu, MessageCircle, Download, Clock3, MapPin } from 'lucide-react';
+import { Brand } from './Brand';
+import { PwaStatus } from './pwa';
+import business from '@/lib/business.json';
+export function Header() {
+ const [open,setOpen]=useState(false);const path=usePathname();const trigger=useRef<HTMLButtonElement>(null);
+ useEffect(()=>setOpen(false),[path]);
+ useEffect(()=>{const handle=(e:KeyboardEvent)=>{if(e.key==='Escape' && open){setOpen(false);trigger.current?.focus();}};document.addEventListener('keydown',handle);return()=>document.removeEventListener('keydown',handle);},[open]);
+ return <><a className="skip-link" href="#main">Pular para o conteúdo</a><header className="header"><div className="container header-inner"><Brand/><nav className="desktop-nav" aria-label="Navegação principal"><Link href="/servicos/" aria-current={path.startsWith('/servicos')?'page':undefined}>Serviços</Link><Link href="/#como-funciona">Como funciona</Link><Link href="/sobre/" aria-current={path==='/sobre/'?'page':undefined}>Sobre a HS</Link><Link href="/#duvidas">Dúvidas</Link></nav><Link className="button small header-contact" href="/contato/"><MessageCircle size={17}/>Falar com Hugo</Link><button ref={trigger} type="button" className="icon-button menu-trigger" aria-label={open?'Fechar menu':'Abrir menu'} aria-expanded={open} aria-controls="mobile-menu" onClick={()=>setOpen(!open)}>{open?<X/>:<Menu/>}</button></div>{open&&<nav id="mobile-menu" className="mobile-menu" aria-label="Menu mobile"><Link href="/servicos/" onClick={()=>setOpen(false)}>Serviços</Link><Link href="/#como-funciona" onClick={()=>setOpen(false)}>Como funciona</Link><Link href="/sobre/" onClick={()=>setOpen(false)}>Sobre a HS</Link><Link href="/#duvidas" onClick={()=>setOpen(false)}>Dúvidas</Link><Link href="/contato/" onClick={()=>setOpen(false)}>Falar com Hugo</Link></nav>}</header><PwaStatus/></>;
+}
+export function Footer(){return <><footer className="footer"><div className="container footer-grid"><div><Brand/><p>Cuidado técnico.<br/>Conversa clara.</p></div><div><h2>Atendimento</h2><p><MapPin size={16}/>Belo Horizonte e região</p><p><Clock3 size={16}/>Presencial e reparação 24h</p><Link href="/contato/">{business.phoneDisplay}</Link></div><div><h2>Acesso rápido</h2><Link href="/servicos/">Nossos serviços</Link><Link href="/instalar/">Instalar o aplicativo</Link><Link href="/privacidade/">Privacidade</Link></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} HS Eletrônicos</span><span>Entre em contato para combinar o atendimento.</span></div></footer><MobileTabs/></>;}
+function MobileTabs(){const path=usePathname();const tabs=[{href:'/',label:'Início',icon:Home},{href:'/servicos/',label:'Serviços',icon:Cpu},{href:'/contato/',label:'Atendimento',icon:MessageCircle},{href:'/instalar/',label:'Aplicativo',icon:Download}];return <nav className="bottom-tabs" aria-label="Navegação do aplicativo">{tabs.map(t=><Link key={t.href} href={t.href} aria-current={(t.href==='/'?path==='/':path.startsWith(t.href))?'page':undefined}><t.icon size={21}/><span>{t.label}</span></Link>)}</nav>;}

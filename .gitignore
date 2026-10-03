@@ -1,0 +1,24 @@
+# Dependências e artefatos locais reproduzíveis
+**/node_modules/
+**/.next/
+**/out/
+**/.vercel/
+**/test-results/
+**/playwright-report/
+**/__pycache__/
+**/*.pyc
+**/*.tsbuildinfo
+05_Fontes_e_QA/dependencias/
+
+# Credenciais e configurações privadas
+**/.env
+**/.env.*
+!**/.env.example
+**/*.pem
+**/*.key
+
+# Arquivos temporários e sistema
+**/*.log
+**/.DS_Store
+**/Thumbs.db
+**/desktop.ini
