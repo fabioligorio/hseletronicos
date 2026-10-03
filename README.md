@@ -13,7 +13,7 @@ npm run build
 npm start
 ```
 
-Prévia: http://127.0.0.1:3000. Leia o README do aplicativo para testes, instalação PWA e publicação na Vercel. Ao importar na Vercel, selecione `03_Site/pwa` como Root Directory.
+Prévia: http://127.0.0.1:3000. Leia o README do aplicativo para testes, instalação PWA e publicação na Vercel. Ao importar na Vercel, mantenha Root Directory na raiz do repositório (`.`): o `vercel.json` da raiz instala e compila `03_Site/pwa`, publicando somente `03_Site/pwa/out`. Projetos já configurados com Root Directory `03_Site/pwa` também possuem configuração própria. Não publique a pasta de documentos como saída do site.
 
 ## Documentação e identidade
 
